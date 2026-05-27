@@ -22,5 +22,5 @@ Running under: Windows 11 x64 (build 26200)
 1. Descarga el archivo "Real estate valuation data set.xlsx" en el siguiente link: https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set.
 2. Abre el script de R con nombre "Proyecto.R".
 3. Busca la línea **número 7** (donde se encuentra "read_xlsx").
-4. Reemplaza la ruta por defecto por la ruta local de tu computadora en donde este guardado el archivo.
+4. Reemplaza la ruta por defecto por la ruta local de tu computadora en donde este guardado el dataset.
 5. Ejecuta el script
