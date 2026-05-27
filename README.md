@@ -1,7 +1,7 @@
 # Proyecto-Análisis-de-Regresión
 Proyecto para el curso Análisis de Regresión UC-2026-1er Semestre
 
-##Session Info
+## Session Info:
 
 R version 4.5.0 (2025-04-11 ucrt)
 
