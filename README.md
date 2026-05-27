@@ -2,11 +2,13 @@
 Proyecto para el curso Análisis de Regresión UC-2026-1er Semestre
 
 #Session Info#
+
 R version 4.5.0 (2025-04-11 ucrt)
 Platform: x86_64-w64-mingw32/x64
 Running under: Windows 11 x64 (build 26200)
 
 #Librerias usadas en el script de R#
+
 library(readxl)
 library(ggplot2)
 library(dplyr)
