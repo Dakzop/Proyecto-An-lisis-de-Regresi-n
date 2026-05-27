@@ -9,7 +9,7 @@ Platform: x86_64-w64-mingw32/x64
 
 Running under: Windows 11 x64 (build 26200)
 
-##Librerias usadas en el script de R
+##Librerias usadas en el script de R:
 
 1. library(readxl)
 2. library(ggplot2)
