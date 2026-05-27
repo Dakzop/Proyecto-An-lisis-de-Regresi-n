@@ -25,9 +25,20 @@ cor_demanda <- matriz_cor[, "Y house price of unit area"]
 cor_demanda <- cor_demanda[order(abs(cor_demanda), decreasing = TRUE)]
 print(round(cor_demanda, 3))
 
-ggpairs(datos[, c("X1 transaction date","X2 house age", "X3 distance to the nearest MRT station", 
-                       "X4 number of convenience stores","X5 latitude","X6 longitude" , "Y house price of unit area")])
+variables <- c("X1 transaction date","X2 house age", "X3 distance to the nearest MRT station", 
+                      "X4 number of convenience stores","X5 latitude","X6 longitude" , "Y house price of unit area")
 
+datos_grafico <- datos[, variables]
+colnames(datos_grafico) <- c("Fecha_Trans", "Edad_Casa", "Dist_MRT", "Num_Tiendas", "Lat", "Long", "Precio_Ping")
+
+ggpairs(datos_grafico, lower = list(continuous = wrap("points", size = 0.9, alpha = 0.5)), 
+        upper = list(continuous = wrap("cor", size = 3.5))) + 
+  theme_bw() +
+  theme(
+    axis.text = element_text(size = 7),     
+    strip.text = element_text(size = 8),    
+    panel.grid.major = element_blank()      
+  )
 
 hist(datos$`Y house price of unit area`)
 
