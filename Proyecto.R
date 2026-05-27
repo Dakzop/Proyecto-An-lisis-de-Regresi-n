@@ -4,7 +4,7 @@ library(dplyr)
 library(GGally)
 library(moments)
 
-datos <- read_xlsx("C:/Users/nelso/Desktop/Regresion/Real estate valuation data set.xlsx") #Colocar aquí la ruta del archivo#
+datos <- read_xlsx("C:/Users/nelso/Downloads/Real estate valuation data set.xlsx") #Colocar aquí la ruta del archivo#
 
 
 #Función para ver datos vacios (NA)#
@@ -39,6 +39,7 @@ ggpairs(datos_grafico, lower = list(continuous = wrap("points", size = 0.9, alph
     strip.text = element_text(size = 8),    
     panel.grid.major = element_blank()      
   )
+
 
 hist(datos$`Y house price of unit area`)
 
@@ -122,12 +123,36 @@ boxplot(`Y house price of unit area` ~ factor(round(`X1 transaction date`, 2)), 
 mediana_global <- median(datos$`Y house price of unit area`, na.rm = TRUE)
 abline(h = mediana_global, col = "red", lty = 2, lwd = 2)
 
+legend("topright", 
+       legend = c("Distribución de precios por fecha de transacción", "Mediana global = 38.45"), 
+       col = c("darkblue", "red"),   
+       pt.bg = c("lightblue", NA),   
+       pch = c(22, NA),              
+       lty = c(NA, 2),               
+       lwd = c(1, 2),                
+       pt.cex = 1.5,                 
+       cex = 0.8)
+
 boxplot(`Y house price of unit area` ~ factor(`X4 number of convenience stores`), data = datos,
         main = "Precio de la vivienda según número de tiendas cercanas",
         xlab = "Número de tiendas de conveniencia",
         ylab = "Precio por Unidad de Área",
         col = "lightblue",
         border = "darkblue")
+
+mediana_global <- median(datos$`Y house price of unit area`, na.rm = TRUE)
+abline(h = mediana_global, col = "red", lty = 2, lwd = 2)
+
+
+legend("topright", 
+       legend = c("Distribución de precios por N° de tiendas", "Mediana global = 38.45"), 
+       col = c("darkblue", "red"),   
+       pt.bg = c("lightblue", NA),   
+       pch = c(22, NA),              
+       lty = c(NA, 2),               
+       lwd = c(1, 2),                
+       pt.cex = 1.5,                 
+       cex = 0.8)
 
 sessionInfo()
 
