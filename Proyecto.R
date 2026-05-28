@@ -55,6 +55,14 @@ plot(datos$`X1 transaction date`, datos$`Y house price of unit area`,
      cex = 0.6)
 lines(lowess(datos$`X1 transaction date`, datos$`Y house price of unit area`), col = "red", lwd = 2)
 
+legend("topright", 
+       legend = c("Observaciones", "Tendencia Lowess"),
+       col = c("darkblue", "red"),
+       pch = c(19, NA),       
+       lty = c(NA, 1),        
+       lwd = c(NA, 2),        
+       cex = 0.8)
+
 plot(datos$`X2 house age`, datos$`Y house price of unit area`,
      main = "Evolución del Precio por Unidad de Área",
      xlab = "Antiguedad de la vivienda", 
@@ -63,6 +71,14 @@ plot(datos$`X2 house age`, datos$`Y house price of unit area`,
      col = "darkblue",   
      cex = 0.6)
 lines(lowess(datos$`X2 house age`, datos$`Y house price of unit area`), col = "red", lwd = 2)
+
+legend("topright", 
+       legend = c("Observaciones", "Tendencia Lowess"),
+       col = c("darkblue", "red"),
+       pch = c(19, NA),       
+       lty = c(NA, 1),        
+       lwd = c(NA, 2),        
+       cex = 0.8)
 
 plot(datos$`X3 distance to the nearest MRT station`, datos$`Y house price of unit area`,
      main = "Evolución del Precio por Unidad de Área",
@@ -73,6 +89,14 @@ plot(datos$`X3 distance to the nearest MRT station`, datos$`Y house price of uni
      cex = 0.6)
 lines(lowess(datos$`X3 distance to the nearest MRT station`, datos$`Y house price of unit area`), col = "red", lwd = 2)
 
+legend("topright", 
+       legend = c("Observaciones", "Tendencia Lowess"),
+       col = c("darkblue", "red"),
+       pch = c(19, NA),       
+       lty = c(NA, 1),        
+       lwd = c(NA, 2),        
+       cex = 0.8)
+
 plot(log(datos$`X3 distance to the nearest MRT station`), datos$`Y house price of unit area`,
      main = "Evolución del Precio por Unidad de Área",
      xlab = "Log Distancia física hacia la estación de metro más cercana", 
@@ -81,6 +105,14 @@ plot(log(datos$`X3 distance to the nearest MRT station`), datos$`Y house price o
      col = "darkblue",   
      cex = 0.6)
 lines(lowess(log(datos$`X3 distance to the nearest MRT station`), datos$`Y house price of unit area`), col = "red", lwd = 2)
+
+legend("topright", 
+       legend = c("Observaciones", "Tendencia Lowess"),
+       col = c("darkblue", "red"),
+       pch = c(19, NA),       
+       lty = c(NA, 1),        
+       lwd = c(NA, 2),        
+       cex = 0.8)
 
 plot(datos$`X4 number of convenience stores`, datos$`Y house price of unit area`,
      main = "Evolución del Precio por Unidad de Área",
@@ -91,6 +123,13 @@ plot(datos$`X4 number of convenience stores`, datos$`Y house price of unit area`
      cex = 0.6)
 lines(lowess(datos$`X4 number of convenience stores`, datos$`Y house price of unit area`), col = "red", lwd = 2)
 
+legend("topright", 
+       legend = c("Observaciones", "Tendencia Lowess"),
+       col = c("darkblue", "red"),
+       pch = c(19, NA),       
+       lty = c(NA, 1),        
+       lwd = c(NA, 2),        
+       cex = 0.8)
 
 plot(datos$`X5 latitude`, datos$`Y house price of unit area`,
      main = "Evolución del Precio por Unidad de Área",
@@ -101,6 +140,15 @@ plot(datos$`X5 latitude`, datos$`Y house price of unit area`,
      cex = 0.6)
 lines(lowess(datos$`X5 latitude`, datos$`Y house price of unit area`), col = "red", lwd = 2)
 
+
+legend("topright", 
+       legend = c("Observaciones", "Tendencia Lowess"),
+       col = c("darkblue", "red"),
+       pch = c(19, NA),       
+       lty = c(NA, 1),        
+       lwd = c(NA, 2),        
+       cex = 0.8)
+
 plot(datos$`X6 longitude`, datos$`Y house price of unit area`,
      main = "Evolución del Precio por Unidad de Área",
      xlab = "Longitud", 
@@ -109,6 +157,14 @@ plot(datos$`X6 longitude`, datos$`Y house price of unit area`,
      col = "darkblue",   
      cex = 0.6)
 lines(lowess(datos$`X6 longitude`, datos$`Y house price of unit area`), col = "red", lwd = 2)
+
+legend("topright", 
+       legend = c("Observaciones", "Tendencia Lowess"),
+       col = c("darkblue", "red"),
+       pch = c(19, NA),       
+       lty = c(NA, 1),        
+       lwd = c(NA, 2),        
+       cex = 0.8)
 
 
 #BOX-PLOTS#
