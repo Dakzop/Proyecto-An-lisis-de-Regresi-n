@@ -20,6 +20,7 @@ datos <- read_xlsx("C:/Users/nelso/Desktop/Regresion/Real estate valuation data 
 #Función para ver datos vacios (NA)#
 sum(is.na(datos))
 
+#Resumen estadístico de los datos#
 summary(datos,digits = 7)
 Asimetria <- apply(datos,2,skewness)
 curtosis <- apply(datos,2,kurtosis)
