@@ -55,9 +55,9 @@ ggpairs(datos_grafico, lower = list(continuous = wrap("points", size = 0.9, alph
 #PLOT DE LAS VARIABLES CON LAS VARIABLES RESPUESTA#
 par(mar = c(8, 5, 4, 2))
 
-meses_nombres <- c("Sep 2012.", "Oct 2012.", "Nov 2012.", "Dic 2012.", 
-                   "Ene 2013.", "Feb 2013.", "Mar 2013.", "Abr 2013.", "May 2013.", 
-                   "Jun 2013.", "Jul 2013.", "Ago 2013.")
+meses_nombres <- c("Jun 2012.", "Jul 2012.", "Ago 2012.", "Sep 2012.", "Oct 2012.", 
+                   "Nov 2012.", "Dic 2012.", "Ene 2013.", "Feb 2013.", "Mar 2013.", 
+                   "Abr 2013.", "May 2013.")
 
 plot(datos$`X1 transaction date`, datos$`Y house price of unit area`,
      main = "Evolución del Precio por Unidad de Área",
@@ -85,7 +85,7 @@ par(mar = c(8, 5, 4, 2))
 
 plot(datos$`X2 house age`, datos$`Y house price of unit area`,
      main = "Evolución del Precio por Unidad de Área",
-     xlab = "",              # Dejamos vacío para usar mtext y que coincida
+     xlab = "",
      ylab = "Precio de vivienda por Unidad de Área", 
      cex.lab = 1.5,
      cex.main = 1.7,
@@ -261,9 +261,9 @@ legend("topright",
 #BOX-PLOT
 valores_unicos <- sort(unique(datos$`X1 transaction date`))
 
-meses_nombres <- c("Sep 2012.", "Oct 2012.", "Nov 2012.", "Dic 2012.", 
-                   "Ene 2013.", "Feb 2013.", "Mar 2013.", "Abr 2013.", "May 2013.", 
-                   "Jun 2013.", "Jul 2013.", "Ago 2013.")
+meses_nombres <- c("Jun 2012.", "Jul 2012.", "Ago 2012.", "Sep 2012.", "Oct 2012.", 
+                   "Nov 2012.", "Dic 2012.", "Ene 2013.", "Feb 2013.", "Mar 2013.", 
+                   "Abr 2013.", "May 2013.")
 
 par(mar = c(8, 5, 5, 2))
 
@@ -275,7 +275,7 @@ boxplot(`Y house price of unit area` ~ factor(`X1 transaction date`, levels = va
         xlab = "", 
         ylab = "Precio por Unidad de Área",
         las = 2,            
-        xaxt = "n",         # Ocultamos el eje automático para poner los meses
+        xaxt = "n",
         cex.axis = 0.8,
         cex.lab = 1.5,
         cex.main = 1.7)
@@ -469,12 +469,12 @@ bptest(modelo2)
 res <- residuals(modelo2)
 plot(fitted(modelo2), residuals(modelo2),
      main = "Residuos vs Valores Ajustados",
-     cex.main = 1.7,      # tamaño del título
-     cex.lab = 1.5,       # tamaño nombres ejes
-     cex.axis = 1.1,      # tamaño números ejes
+     cex.main = 1.7,     
+     cex.lab = 1.5,
+     cex.axis = 1.1,
      pch = 1,
-     col = "darkblue",    # color de los puntos
-     cex = 0.7,           # tamaño de los puntos
+     col = "darkblue",
+     cex = 0.7,
      xlab = "Valores ajustados",
      ylab = "Residuos")
 
