@@ -531,7 +531,7 @@ head(casos_raros,10)
 casos <- c(114, 149, 271)
 
 
-dfb <- dfbetas(modelo2)[casos] 
+dfb <- dfbetas(modelo2)[casos, ] 
 dff <- dffits(modelo2)[casos]    
 cov <- covratio(modelo2)[casos]  
 
